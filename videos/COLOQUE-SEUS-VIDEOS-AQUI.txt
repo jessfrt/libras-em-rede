@@ -1,0 +1,6 @@
+Coloque aqui seus arquivos .mp4.
+Exemplos:
+  atencao.mp4
+  abrir-caderno.mp4
+  quer-brincar.mp4
+Os nomes completos dos 20 vídeos estão no arquivo README.md.
