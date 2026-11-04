@@ -1,17 +1,19 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#f8faf8" />
-  <meta name="description" content="Libras em Rede — uma biblioteca visual de sinais em Libras para apoiar a comunicação coletiva na escola." />
-  <title>Libras em Rede · Comunicação para todos</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="app.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8f6f0">
+<meta name="description" content="Libras em Rede: sinais do cotidiano para aprender, compartilhar e incluir toda a turma.">
+<title>Libras em Rede — Comunicação para toda a turma</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,500,25,1;0,9..144,600,25,1;1,9..144,500,25,1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script defer src="app.js"></script>
 </head>
 <body>
-  <!-- Ícones vetoriais com estilo único, sem dependências externas. -->
-  <svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
     <symbol id="i-logo" viewBox="0 0 48 48"><rect x="4" y="8" width="28" height="25" rx="9" fill="none" stroke="currentColor" stroke-width="3"/><path d="M10 32v8l10-7M23 15h12c5 0 9 4 9 9v7c0 5-4 9-9 9h-3l-7 5v-5h-2" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M4 12h16m-7-7 7 7-7 7"/></symbol>
     <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M20 12H4m7-7-7 7 7 7"/></symbol>
@@ -43,28 +45,16 @@
     <symbol id="i-zap" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-12h-7l0-8Z"/></symbol>
     <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
   </svg>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <div class="site-shell">
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="#/" aria-label="Libras em Rede — página inicial">
-          <span class="brand-mark"><svg aria-hidden="true"><use href="#i-logo"></use></svg></span>
-          <span class="brand-name">libras<span>em</span>rede<span class="brand-dot">.</span></span>
-        </a>
-        <nav class="main-nav" aria-label="Navegação principal">
-          <a href="#/categorias" id="nav-categorias">Explorar sinais</a>
-          <a href="#/sobre" id="nav-sobre">Sobre o projeto</a>
-        </nav>
-        <a class="header-action" href="#/categorias">Começar <svg class="icon"><use href="#i-arrow-right"></use></svg></a>
-      </div>
-    </header>
-    <main id="conteudo" tabindex="-1"></main>
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-left"><span class="footer-brand">Libras em Rede</span><span>Inclusão que acontece em conjunto.</span></div>
-        <div class="footer-right"><span>Protótipo educacional · Em desenvolvimento</span><span class="footer-divider">·</span><a href="#/sobre">Saiba mais</a></div>
-      </div>
-    </footer>
-  </div>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="site-shell">
+  <div class="topline"><div class="container topline-inner"><span class="topline-dot"></span><span>GESTOS QUE APROXIMAM</span><span class="topline-rule"></span><span>EDUCAÇÃO · CONVIVÊNCIA · INCLUSÃO</span></div></div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="#/" aria-label="Libras em Rede, voltar ao início"><span class="brand-symbol" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span class="brand-name">libras<span>em</span>rede<span class="brand-point">.</span></span></a>
+    <nav class="main-nav" aria-label="Menu principal"><a href="#/categorias" id="nav-categorias">Explorar sinais</a><a href="#/sobre" id="nav-sobre">O projeto</a></nav>
+    <a class="header-action" href="#/categorias">Começar a explorar <svg class="icon"><use href="#i-arrow-right"></use></svg></a>
+  </div></header>
+  <main id="conteudo" tabindex="-1"></main>
+  <footer class="site-footer"><div class="container footer-inner"><div><a class="footer-logo" href="#/">libras<span>em</span>rede<span class="brand-point">.</span></a><p>Uma língua nos aproxima. A participação nos conecta.</p></div><div class="footer-right"><span>Projeto educacional experimental</span><a href="#/sobre">Conheça a proposta <svg class="icon"><use href="#i-arrow-right"></use></svg></a></div></div></footer>
+</div>
 </body>
 </html>

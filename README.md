@@ -1,76 +1,49 @@
-# Libras em Rede — site funcional
+# Libras em Rede — Direção visual 02
 
-Protótipo web **responsivo, sem dependências**, com 4 categorias, 20 sinais, player para vídeos, repetição automática, modo tela cheia e velocidade de reprodução.
+Uma versão de design editorial + humanista + funcional da biblioteca de sinais em Libras.
 
-## Como abrir
+## O que mudou
 
-1. Abra `index.html` em um navegador para conhecer o site. É possível visualizar as telas mesmo sem vídeos.
-2. Para testar com vídeos, coloque os arquivos `.mp4` na pasta `videos/` com os nomes listados abaixo.
-3. Abra novamente `index.html` (ou atualize a página): o site localiza e exibe os vídeos automaticamente.
-4. Para publicar no GitHub Pages, envie **todos os arquivos e a pasta `videos`** para um repositório; ative `Settings > Pages > Deploy from a branch` e escolha sua branch e pasta `/ (root)`.
+- Marca geométrica própria, tipografia editorial, hierarquia mais consistente e composição profissional.
+- Quatro categorias em cartões com cores próprias: **Vem brincar!**, **Hora de estudar**, **Preciso de...** e **Como estou?**
+- As páginas internas mantêm os **20 sinais existentes** e seus textos de orientação.
+- Player escuro com **loop**, **reinício**, **velocidades 0,75× / 1× / 1,25×** e **Apresentar** em tela cheia.
+- Na apresentação em tela cheia, botão **Próximo sinal** continua a sequência da mesma categoria; ao sair, a rota fica atualizada.
+- Prévia dos vídeos nos cartões da categoria quando o navegador consegue carregar o primeiro frame; ícone vetorial no fallback.
+- Layout responsivo, links de navegação por teclado, `prefers-reduced-motion` e preservação do enquadramento (`object-fit: contain`) dos sinais.
 
-## Organização
+## Como instalar no repositório existente
 
-```text
-libras-em-rede-site/
-├── index.html       Estrutura e ícones SVG
-├── styles.css       Layout, tipografia, cores, responsividade
-├── app.js           Categorias, nomes, textos e interações
-├── README.md        Este guia
+O projeto atual está em **https://github.com/jessfrt/libras-em-rede** e já inclui 20 vídeos reais no diretório `videos/`.
+
+1. Faça um backup ou crie uma nova branch para testar a versão.
+2. **Substitua apenas** `index.html`, `styles.css`, `app.js` pelos três arquivos deste pacote.
+3. **Não apague** a pasta `videos/` do seu repositório. Os arquivos MP4 continuam sendo utilizados com os nomes atuais.
+4. Abra `index.html` ou publique pelo GitHub Pages.
+5. Para testar o site sem alterar nada, abra `demo-libras-em-rede.html` (arquivo de prévia independente). A prévia usa os arquivos MP4 públicos já hospedados no GitHub, portanto requer conexão com a internet.
+
+### Estrutura final
+
+```
+libras-em-rede/
+├── index.html
+├── styles.css
+├── app.js
+├── README.md
 └── videos/
     ├── atencao.mp4
-    └── ...
+    ├── abrir-caderno.mp4
+    └── ... outros 18 arquivos MP4 existentes ...
 ```
 
-## Nomes dos arquivos de vídeo
+## Pontos para validar com a comunidade escolar
 
-| Categoria | Sinal | Arquivo |
-|---|---|---|
-| Vem brincar! | Quer brincar? | `videos/quer-brincar.mp4` |
-| Vem brincar! | Sua vez | `videos/sua-vez.mp4` |
-| Vem brincar! | Vamos juntos | `videos/vamos-juntos.mp4` |
-| Vem brincar! | Legal! | `videos/legal.mp4` |
-| Vem brincar! | Amigo | `videos/amigo.mp4` |
-| Hora de estudar | Atenção | `videos/atencao.mp4` |
-| Hora de estudar | Abrir caderno | `videos/abrir-caderno.mp4` |
-| Hora de estudar | Pergunta | `videos/pergunta.mp4` |
-| Hora de estudar | Esperar | `videos/esperar.mp4` |
-| Hora de estudar | Ajuda | `videos/ajuda.mp4` |
-| Preciso de... | Banheiro | `videos/banheiro.mp4` |
-| Preciso de... | Água | `videos/agua.mp4` |
-| Preciso de... | Não entendi | `videos/nao-entendi.mp4` |
-| Preciso de... | Obrigado | `videos/obrigado.mp4` |
-| Preciso de... | Dor | `videos/dor.mp4` |
-| Como estou? | Feliz | `videos/feliz.mp4` |
-| Como estou? | Triste | `videos/triste.mp4` |
-| Como estou? | Raiva | `videos/raiva.mp4` |
-| Como estou? | Medo | `videos/medo.mp4` |
-| Como estou? | Gostei | `videos/gostei.mp4` |
+A interface serve como ferramenta **complementar**. Antes de apresentar os sinais como material pedagógico validado, obtenha revisão das gravações e orientações por pessoas surdas fluentes e profissionais de Libras, considerando variações regionais. Verifique contraste em projetores, legibilidade à distância, enquadramento das mãos e expressões e a experiência da turma com as categorias.
 
-### Padrão recomendado para os vídeos
+## Observações técnicas
 
-- **Formato:** MP4, vídeo H.264 (compatibilidade ampla com navegadores).
-- **Resolução:** 1080p, quando possível.
-- **Enquadramento:** mãos, braços, tronco e expressões faciais visíveis, sem cortes; mantenha contraste entre roupas, corpo e fundo.
-- **Orientação:** vertical ou horizontal. O player usa `object-fit: contain`, por isso **não corta** vídeos verticais.
-- **Duração:** clipes curtos, com pequena pausa natural no início/fim para melhorar a experiência em loop.
-- **Áudio:** vídeos iniciam sem áudio para permitir autoplay; o player nativo pode oferecer outros controles.
-- **Validação:** confirme os sinais e possíveis variações regionais com pessoas surdas fluentes/profissionais de Libras, antes de uso educacional.
-
-## Como alterar os textos ou incluir mais sinais
-
-Edite o array `CATEGORIES` no início do arquivo `app.js`. A rota do vídeo é calculada a partir do campo `slug`: `videos/SLUG.mp4`.
-
-## Funcionalidades
-
-- Página inicial, quatro categorias, vinte páginas individuais de sinais e página sobre.
-- Navegação por links e URL com `#`, que funciona em arquivos locais e GitHub Pages.
-- Vídeo com `autoplay`, `muted`, `loop`, `playsinline`, controles nativos e modo tela cheia.
-- Botões para ativar/desativar loop, reiniciar vídeo, velocidade (0,75×/1×/1,25×) e expandir.
-- Navegação entre sinais por links ou setas esquerda/direita do teclado quando o foco não está em um controle.
-- Estado reservado claro para vídeos que ainda não foram adicionados.
-- Layout mobile, tablet e desktop, navegação por teclado e preferência por movimento reduzido.
-
-### Importante
-
-Este protótipo é um recurso complementar de mediação visual coletiva; não substitui ensino de Libras, intérprete, educador especializado ou avaliação junto à comunidade surda.
+- Site estático sem dependências JS ou build: HTML, CSS e JavaScript puro.
+- Fontes externas `DM Sans` e `Fraunces` são opcionais; o site inclui fallbacks locais de sistema/Georgia.
+- `app.js` contém os dados dos 20 sinais, suas rotas e controles de vídeo.
+- Para gravar vídeos, prefira MP4 com H.264; não corte gestos ou expressões com CSS.
+- No modo `file://`, alguns navegadores podem restringir reprodução: GitHub Pages ou servidor HTTP são mais confiáveis.
